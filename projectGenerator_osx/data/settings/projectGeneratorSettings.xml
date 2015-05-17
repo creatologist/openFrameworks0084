@@ -1,0 +1,6 @@
+
+<!-- the path from this EXE / APP to the root folder -->
+<appToRoot>../</appToRoot>
+
+<!-- from the OF root, where should we encourage people to put apps -->
+<defaultNewProjectLocation>ofx-projects-0084/projects</defaultNewProjectLocation>
