@@ -15,6 +15,6 @@ Modified version of openFrameworks -- a C++ toolkit for creative coding. For Mac
 + addons
 --------
 * ofxFenster
-• open / close windows on the fly
+..* open / close windows on the fly
 * ofxUI
 * ofxPostProcessing
