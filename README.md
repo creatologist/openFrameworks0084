@@ -1,3 +1,14 @@
++Addons
+--------
+ofxFenster (modified/fixed)
+* can open / close windows on the fly
+
++Libs
+--------
+lbs/boost
+
+
+
 [openFrameworks](http://openframeworks.cc/)
 ================
 
