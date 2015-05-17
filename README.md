@@ -8,8 +8,8 @@
 
 + addons
 --------
-ofxFenster (modified/fixed)
-* can open / close windows on the fly
+ofxFenster
+* open / close windows on the fly
 
 
 + libs
