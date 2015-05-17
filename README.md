@@ -1,11 +1,18 @@
-+Addons
++ events
+--------
+* scrolling
+* 
+
++ addons
 --------
 ofxFenster (modified/fixed)
 * can open / close windows on the fly
 
-+Libs
+
++libs
 --------
 lbs/boost
+
 
 
 
