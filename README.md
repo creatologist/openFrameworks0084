@@ -7,12 +7,14 @@ Modified version of openFrameworks -- a C++ toolkit for creative coding. For Mac
 * scrolling 
 
 
-+ addons
---------
-ofxFenster
-* open / close windows on the fly
-
-
 + libs
 --------
-lbs/boost
+* boost
+
+
++ addons
+--------
+* ofxFenster
+• open / close windows on the fly
+* ofxUI
+* ofxPostProcessing
