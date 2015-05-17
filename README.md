@@ -1,6 +1,6 @@
 [openFrameworks+](http://openframeworks.cc/)
 ================
-Modified version of openFrameworks -- a C++ toolkit for creative coding. 
+Modified version of openFrameworks -- a C++ toolkit for creative coding. For Mac OSX Yosemite 10.10 x Xcode6
 
 + events
 --------
