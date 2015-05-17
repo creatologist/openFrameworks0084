@@ -1,3 +1,5 @@
+[openFrameworks+]
+
 + events
 --------
 * scrolling 
@@ -9,7 +11,7 @@ ofxFenster (modified/fixed)
 * can open / close windows on the fly
 
 
-+libs
++ libs
 --------
 lbs/boost
 
