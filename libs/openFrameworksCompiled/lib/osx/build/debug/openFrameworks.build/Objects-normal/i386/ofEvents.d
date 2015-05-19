@@ -1,11 +1,11 @@
 dependencies: \
-  /Users/Stardust/Files/lab/openFrameworks0084/libs/openFrameworks/events/ofEvents.cpp \
+  /Users/Stardust/Documents/GitHub/openFrameworks0084/libs/openFrameworks/events/ofEvents.cpp \
   ../../../../libs/openFrameworks/events/ofEvents.h \
-  /Users/Stardust/Files/lab/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofConstants.h \
+  /Users/Stardust/Documents/GitHub/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofConstants.h \
   ../../../../libs/glew/include/GL/glew.h \
   ../../../../libs/tess2/include/tesselator.h \
-  /Users/Stardust/Files/lab/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/types/ofPoint.h \
-  /Users/Stardust/Files/lab/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/math/ofVec3f.h \
+  /Users/Stardust/Documents/GitHub/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/types/ofPoint.h \
+  /Users/Stardust/Documents/GitHub/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/math/ofVec3f.h \
   ../../../../libs/openFrameworks/math/ofVec2f.h \
   ../../../../libs/openFrameworks/math/ofVec4f.h \
   ../../../../libs/openFrameworks/events/ofEventUtils.h \
@@ -46,23 +46,23 @@ dependencies: \
   ../../../../libs/poco/include/Poco/Timestamp.h \
   ../../../../libs/poco/include/Poco/FunctionPriorityDelegate.h \
   ../../../../libs/openFrameworks/events/ofDelegate.h \
-  /Users/Stardust/Files/lab/openFrameworks0084/libs/openFrameworks/app/ofAppRunner.h \
-  /Users/Stardust/Files/lab/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/types/ofRectangle.h \
-  /Users/Stardust/Files/lab/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofLog.h \
+  /Users/Stardust/Documents/GitHub/openFrameworks0084/libs/openFrameworks/app/ofAppRunner.h \
+  /Users/Stardust/Documents/GitHub/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/types/ofRectangle.h \
+  /Users/Stardust/Documents/GitHub/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofLog.h \
   ../../../../libs/openFrameworks/utils/ofFileUtils.h \
   ../../../../libs/poco/include/Poco/File.h \
   ../../../../libs/poco/include/Poco/File_UNIX.h \
-  /Users/Stardust/Files/lab/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/types/ofTypes.h \
+  /Users/Stardust/Documents/GitHub/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/types/ofTypes.h \
   ../../../../libs/openFrameworks/types/ofColor.h \
-  /Users/Stardust/Files/lab/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/math/ofMath.h \
-  /Users/Stardust/Files/lab/openFrameworks0084/libs/openFrameworks/app/ofBaseApp.h \
-  /Users/Stardust/Files/lab/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/types/ofBaseTypes.h \
-  /Users/Stardust/Files/lab/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/3d/ofMesh.h \
-  /Users/Stardust/Files/lab/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofUtils.h \
+  /Users/Stardust/Documents/GitHub/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/math/ofMath.h \
+  /Users/Stardust/Documents/GitHub/openFrameworks0084/libs/openFrameworks/app/ofBaseApp.h \
+  /Users/Stardust/Documents/GitHub/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/types/ofBaseTypes.h \
+  /Users/Stardust/Documents/GitHub/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/3d/ofMesh.h \
+  /Users/Stardust/Documents/GitHub/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofUtils.h \
   ../../../../libs/poco/include/Poco/Path.h \
-  /Users/Stardust/Files/lab/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/gl/ofGLUtils.h \
-  /Users/Stardust/Files/lab/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofPixels.h \
-  /Users/Stardust/Files/lab/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/math/ofMatrix4x4.h \
+  /Users/Stardust/Documents/GitHub/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/gl/ofGLUtils.h \
+  /Users/Stardust/Documents/GitHub/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofPixels.h \
+  /Users/Stardust/Documents/GitHub/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/math/ofMatrix4x4.h \
   ../../../../libs/openFrameworks/math/ofQuaternion.h \
-  /Users/Stardust/Files/lab/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofGraphics.h \
-  /Users/Stardust/Files/lab/openFrameworks0084/libs/openFrameworks/app/ofAppBaseWindow.h
+  /Users/Stardust/Documents/GitHub/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofGraphics.h \
+  /Users/Stardust/Documents/GitHub/openFrameworks0084/libs/openFrameworks/app/ofAppBaseWindow.h

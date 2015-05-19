@@ -1,6 +1,6 @@
 dependencies: \
-  /Users/Stardust/Files/lab/openFrameworks0084/libs/openFrameworks/sound/ofOpenALSoundPlayer.cpp \
+  /Users/Stardust/Documents/GitHub/openFrameworks0084/libs/openFrameworks/sound/ofOpenALSoundPlayer.cpp \
   ../../../../libs/openFrameworks/sound/ofOpenALSoundPlayer.h \
-  /Users/Stardust/Files/lab/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofConstants.h \
+  /Users/Stardust/Documents/GitHub/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofConstants.h \
   ../../../../libs/glew/include/GL/glew.h \
   ../../../../libs/tess2/include/tesselator.h

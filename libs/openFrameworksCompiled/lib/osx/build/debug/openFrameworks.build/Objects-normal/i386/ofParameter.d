@@ -1,12 +1,12 @@
 dependencies: \
-  /Users/Stardust/Files/lab/openFrameworks0084/libs/openFrameworks/types/ofParameter.cpp \
+  /Users/Stardust/Documents/GitHub/openFrameworks0084/libs/openFrameworks/types/ofParameter.cpp \
   ../../../../libs/openFrameworks/types/ofParameter.h \
-  /Users/Stardust/Files/lab/openFrameworks0084/libs/openFrameworks/events/ofEvents.h \
-  /Users/Stardust/Files/lab/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofConstants.h \
+  /Users/Stardust/Documents/GitHub/openFrameworks0084/libs/openFrameworks/events/ofEvents.h \
+  /Users/Stardust/Documents/GitHub/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofConstants.h \
   ../../../../libs/glew/include/GL/glew.h \
   ../../../../libs/tess2/include/tesselator.h \
-  /Users/Stardust/Files/lab/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/types/ofPoint.h \
-  /Users/Stardust/Files/lab/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/math/ofVec3f.h \
+  /Users/Stardust/Documents/GitHub/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/types/ofPoint.h \
+  /Users/Stardust/Documents/GitHub/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/math/ofVec3f.h \
   ../../../../libs/openFrameworks/math/ofVec2f.h \
   ../../../../libs/openFrameworks/math/ofVec4f.h \
   ../../../../libs/openFrameworks/events/ofEventUtils.h \
@@ -49,8 +49,8 @@ dependencies: \
   ../../../../libs/openFrameworks/events/ofDelegate.h \
   ../../../../libs/openFrameworks/types/ofTypes.h \
   ../../../../libs/openFrameworks/types/ofColor.h \
-  /Users/Stardust/Files/lab/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/math/ofMath.h \
-  /Users/Stardust/Files/lab/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofUtils.h \
+  /Users/Stardust/Documents/GitHub/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/math/ofMath.h \
+  /Users/Stardust/Documents/GitHub/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofUtils.h \
   ../../../../libs/openFrameworks/utils/ofLog.h \
   ../../../../libs/openFrameworks/utils/ofFileUtils.h \
   ../../../../libs/poco/include/Poco/File.h \

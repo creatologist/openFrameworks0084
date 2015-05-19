@@ -1,3 +1,3 @@
 dependencies: \
-  /Users/Stardust/Files/lab/openFrameworks0084/libs/openFrameworks/video/ofQTKitMovieRenderer.m \
+  /Users/Stardust/Documents/GitHub/openFrameworks0084/libs/openFrameworks/video/ofQTKitMovieRenderer.m \
   ../../../../libs/openFrameworks/video/ofQTKitMovieRenderer.h
