@@ -1,6 +1,6 @@
 dependencies: \
-  /Users/Stardust/Documents/GitHub/openFrameworks0084/libs/openFrameworks/video/ofVideoPlayer.cpp \
-  ../../../../libs/openFrameworks/video/ofVideoPlayer.h \
+  /Users/Stardust/Documents/GitHub/openFrameworks0084/libs/openFrameworks/video/ofVideoGrabber.cpp \
+  ../../../../libs/openFrameworks/video/ofVideoGrabber.h \
   /Users/Stardust/Documents/GitHub/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofConstants.h \
   ../../../../libs/glew/include/GL/glew.h \
   ../../../../libs/tess2/include/tesselator.h \
@@ -38,7 +38,7 @@ dependencies: \
   ../../../../libs/openFrameworks/math/ofQuaternion.h \
   ../../../../libs/openFrameworks/gl/ofVboMesh.h \
   ../../../../libs/openFrameworks/gl/ofVbo.h \
-  ../../../../libs/openFrameworks/video/ofQTKitPlayer.h \
+  ../../../../libs/openFrameworks/video/ofQTKitGrabber.h \
   /Users/Stardust/Documents/GitHub/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/ofMain.h \
   /Users/Stardust/Documents/GitHub/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofSystemUtils.h \
   /Users/Stardust/Documents/GitHub/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofThread.h \
@@ -166,7 +166,7 @@ dependencies: \
   ../../../../libs/fmodex/include/fmod_dsp.h \
   ../../../../libs/fmodex/include/fmod_memoryinfo.h \
   ../../../../libs/fmodex/include/fmod_errors.h \
-  /Users/Stardust/Documents/GitHub/openFrameworks0084/libs/openFrameworks/video/ofVideoGrabber.h \
-  ../../../../libs/openFrameworks/video/ofQTKitGrabber.h \
+  /Users/Stardust/Documents/GitHub/openFrameworks0084/libs/openFrameworks/video/ofVideoPlayer.h \
+  ../../../../libs/openFrameworks/video/ofQTKitPlayer.h \
   /Users/Stardust/Documents/GitHub/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/3d/ofCamera.h \
   /Users/Stardust/Documents/GitHub/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/3d/ofEasyCam.h
