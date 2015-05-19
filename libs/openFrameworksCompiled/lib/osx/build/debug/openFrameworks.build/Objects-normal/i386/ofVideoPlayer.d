@@ -1,4 +1,5 @@
 dependencies: \
+<<<<<<< Updated upstream
   /Users/Stardust/Documents/GitHub/openFrameworks0084/libs/openFrameworks/video/ofVideoPlayer.cpp \
   ../../../../libs/openFrameworks/video/ofVideoPlayer.h \
   /Users/Stardust/Documents/GitHub/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofConstants.h \
@@ -11,6 +12,20 @@ dependencies: \
   ../../../../libs/openFrameworks/math/ofVec4f.h \
   /Users/Stardust/Documents/GitHub/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/types/ofRectangle.h \
   /Users/Stardust/Documents/GitHub/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofLog.h \
+=======
+  /Users/cmiles1/Documents/Github/openFrameworks0084/libs/openFrameworks/video/ofVideoPlayer.cpp \
+  ../../../../libs/openFrameworks/video/ofVideoPlayer.h \
+  /Users/cmiles1/Documents/Github/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofConstants.h \
+  ../../../../libs/glew/include/GL/glew.h \
+  ../../../../libs/tess2/include/tesselator.h \
+  /Users/cmiles1/Documents/Github/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/gl/ofTexture.h \
+  /Users/cmiles1/Documents/Github/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/types/ofPoint.h \
+  /Users/cmiles1/Documents/Github/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/math/ofVec3f.h \
+  ../../../../libs/openFrameworks/math/ofVec2f.h \
+  ../../../../libs/openFrameworks/math/ofVec4f.h \
+  /Users/cmiles1/Documents/Github/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/types/ofRectangle.h \
+  /Users/cmiles1/Documents/Github/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofLog.h \
+>>>>>>> Stashed changes
   ../../../../libs/openFrameworks/utils/ofFileUtils.h \
   ../../../../libs/poco/include/Poco/File.h \
   ../../../../libs/poco/include/Poco/Foundation.h \
@@ -21,13 +36,20 @@ dependencies: \
   ../../../../libs/poco/include/Poco/Types.h \
   ../../../../libs/poco/include/Poco/Timestamp.h \
   ../../../../libs/poco/include/Poco/File_UNIX.h \
+<<<<<<< Updated upstream
   /Users/Stardust/Documents/GitHub/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/types/ofTypes.h \
   ../../../../libs/openFrameworks/types/ofColor.h \
   /Users/Stardust/Documents/GitHub/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/math/ofMath.h \
+=======
+  /Users/cmiles1/Documents/Github/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/types/ofTypes.h \
+  ../../../../libs/openFrameworks/types/ofColor.h \
+  /Users/cmiles1/Documents/Github/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/math/ofMath.h \
+>>>>>>> Stashed changes
   ../../../../libs/poco/include/Poco/Mutex.h \
   ../../../../libs/poco/include/Poco/Exception.h \
   ../../../../libs/poco/include/Poco/ScopedLock.h \
   ../../../../libs/poco/include/Poco/Mutex_POSIX.h \
+<<<<<<< Updated upstream
   /Users/Stardust/Documents/GitHub/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/types/ofBaseTypes.h \
   /Users/Stardust/Documents/GitHub/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/3d/ofMesh.h \
   /Users/Stardust/Documents/GitHub/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofUtils.h \
@@ -35,13 +57,28 @@ dependencies: \
   /Users/Stardust/Documents/GitHub/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/gl/ofGLUtils.h \
   /Users/Stardust/Documents/GitHub/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofPixels.h \
   /Users/Stardust/Documents/GitHub/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/math/ofMatrix4x4.h \
+=======
+  /Users/cmiles1/Documents/Github/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/types/ofBaseTypes.h \
+  /Users/cmiles1/Documents/Github/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/3d/ofMesh.h \
+  /Users/cmiles1/Documents/Github/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofUtils.h \
+  ../../../../libs/poco/include/Poco/Path.h \
+  /Users/cmiles1/Documents/Github/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/gl/ofGLUtils.h \
+  /Users/cmiles1/Documents/Github/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofPixels.h \
+  /Users/cmiles1/Documents/Github/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/math/ofMatrix4x4.h \
+>>>>>>> Stashed changes
   ../../../../libs/openFrameworks/math/ofQuaternion.h \
   ../../../../libs/openFrameworks/gl/ofVboMesh.h \
   ../../../../libs/openFrameworks/gl/ofVbo.h \
   ../../../../libs/openFrameworks/video/ofQTKitPlayer.h \
+<<<<<<< Updated upstream
   /Users/Stardust/Documents/GitHub/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/ofMain.h \
   /Users/Stardust/Documents/GitHub/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofSystemUtils.h \
   /Users/Stardust/Documents/GitHub/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofThread.h \
+=======
+  /Users/cmiles1/Documents/Github/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/ofMain.h \
+  /Users/cmiles1/Documents/Github/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofSystemUtils.h \
+  /Users/cmiles1/Documents/Github/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofThread.h \
+>>>>>>> Stashed changes
   ../../../../libs/poco/include/Poco/AtomicCounter.h \
   ../../../../libs/poco/include/Poco/Thread.h \
   ../../../../libs/poco/include/Poco/Thread_POSIX.h \
@@ -51,8 +88,13 @@ dependencies: \
   ../../../../libs/poco/include/Poco/Event_POSIX.h \
   ../../../../libs/poco/include/Poco/RefCountedObject.h \
   ../../../../libs/poco/include/Poco/AutoPtr.h \
+<<<<<<< Updated upstream
   /Users/Stardust/Documents/GitHub/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofURLFileLoader.h \
   /Users/Stardust/Documents/GitHub/openFrameworks0084/libs/openFrameworks/events/ofEvents.h \
+=======
+  /Users/cmiles1/Documents/Github/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofURLFileLoader.h \
+  /Users/cmiles1/Documents/Github/openFrameworks0084/libs/openFrameworks/events/ofEvents.h \
+>>>>>>> Stashed changes
   ../../../../libs/openFrameworks/events/ofEventUtils.h \
   ../../../../libs/poco/include/Poco/PriorityEvent.h \
   ../../../../libs/poco/include/Poco/AbstractEvent.h \
@@ -73,7 +115,11 @@ dependencies: \
   ../../../../libs/openFrameworks/events/ofDelegate.h \
   ../../../../libs/poco/include/Poco/Condition.h \
   ../../../../libs/poco/include/Poco/ScopedUnlock.h \
+<<<<<<< Updated upstream
   /Users/Stardust/Documents/GitHub/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofXml.h \
+=======
+  /Users/cmiles1/Documents/Github/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofXml.h \
+>>>>>>> Stashed changes
   ../../../../libs/poco/include/Poco/DOM/Document.h \
   ../../../../libs/poco/include/Poco/XML/XML.h \
   ../../../../libs/poco/include/Poco/DOM/AbstractContainerNode.h \
@@ -119,6 +165,7 @@ dependencies: \
   ../../../../libs/poco/include/Poco/DOM/NamedNodeMap.h \
   ../../../../libs/poco/include/Poco/DOM/ChildNodesList.h \
   ../../../../libs/poco/include/Poco/DOM/NodeList.h \
+<<<<<<< Updated upstream
   /Users/Stardust/Documents/GitHub/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/types/ofParameter.h \
   /Users/Stardust/Documents/GitHub/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/types/ofParameterGroup.h \
   ../../../../libs/poco/include/Poco/Any.h \
@@ -142,6 +189,31 @@ dependencies: \
   /Users/Stardust/Documents/GitHub/openFrameworks0084/libs/openFrameworks/app/ofAppBaseWindow.h \
   /Users/Stardust/Documents/GitHub/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/gl/ofGLProgrammableRenderer.h \
   /Users/Stardust/Documents/GitHub/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofCairoRenderer.h \
+=======
+  /Users/cmiles1/Documents/Github/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/types/ofParameter.h \
+  /Users/cmiles1/Documents/Github/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/types/ofParameterGroup.h \
+  ../../../../libs/poco/include/Poco/Any.h \
+  /Users/cmiles1/Documents/Github/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/math/ofVectorMath.h \
+  ../../../../libs/openFrameworks/math/ofMatrix3x3.h \
+  /Users/cmiles1/Documents/Github/openFrameworks0084/libs/openFrameworks/communication/ofSerial.h \
+  /Users/cmiles1/Documents/Github/openFrameworks0084/libs/openFrameworks/communication/ofArduino.h \
+  /Users/cmiles1/Documents/Github/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/gl/ofFbo.h \
+  /Users/cmiles1/Documents/Github/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/gl/ofGLRenderer.h \
+  /Users/cmiles1/Documents/Github/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofPolyline.h \
+  /Users/cmiles1/Documents/Github/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofGraphics.h \
+  /Users/cmiles1/Documents/Github/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofMatrixStack.h \
+  /Users/cmiles1/Documents/Github/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/gl/ofLight.h \
+  /Users/cmiles1/Documents/Github/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/3d/ofNode.h \
+  ../../../../libs/openFrameworks/3d/of3dUtils.h \
+  /Users/cmiles1/Documents/Github/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/of3dGraphics.h \
+  /Users/cmiles1/Documents/Github/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/3d/of3dPrimitives.h \
+  /Users/cmiles1/Documents/Github/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/gl/ofMaterial.h \
+  /Users/cmiles1/Documents/Github/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/gl/ofShader.h \
+  ../../../../libs/poco/include/Poco/RegularExpression.h \
+  /Users/cmiles1/Documents/Github/openFrameworks0084/libs/openFrameworks/app/ofAppBaseWindow.h \
+  /Users/cmiles1/Documents/Github/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/gl/ofGLProgrammableRenderer.h \
+  /Users/cmiles1/Documents/Github/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofCairoRenderer.h \
+>>>>>>> Stashed changes
   ../../../../libs/cairo/include/cairo/cairo-features.h \
   ../../../../libs/cairo/include/cairo/cairo-pdf.h \
   ../../../../libs/cairo/include/cairo/cairo.h \
@@ -150,6 +222,7 @@ dependencies: \
   ../../../../libs/cairo/include/cairo/cairo-svg.h \
   ../../../../libs/openFrameworks/graphics/ofPath.h \
   ../../../../libs/openFrameworks/graphics/ofTessellator.h \
+<<<<<<< Updated upstream
   /Users/Stardust/Documents/GitHub/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofImage.h \
   /Users/Stardust/Documents/GitHub/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofRendererCollection.h \
   /Users/Stardust/Documents/GitHub/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofTrueTypeFont.h \
@@ -159,6 +232,17 @@ dependencies: \
   ../../../../libs/openFrameworks/sound/ofBaseSoundStream.h \
   ../../../../libs/openFrameworks/sound/ofRtAudioSoundStream.h \
   /Users/Stardust/Documents/GitHub/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/sound/ofSoundPlayer.h \
+=======
+  /Users/cmiles1/Documents/Github/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofImage.h \
+  /Users/cmiles1/Documents/Github/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofRendererCollection.h \
+  /Users/cmiles1/Documents/Github/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofTrueTypeFont.h \
+  /Users/cmiles1/Documents/Github/openFrameworks0084/libs/openFrameworks/app/ofBaseApp.h \
+  /Users/cmiles1/Documents/Github/openFrameworks0084/libs/openFrameworks/app/ofAppRunner.h \
+  /Users/cmiles1/Documents/Github/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/sound/ofSoundStream.h \
+  ../../../../libs/openFrameworks/sound/ofBaseSoundStream.h \
+  ../../../../libs/openFrameworks/sound/ofRtAudioSoundStream.h \
+  /Users/cmiles1/Documents/Github/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/sound/ofSoundPlayer.h \
+>>>>>>> Stashed changes
   ../../../../libs/openFrameworks/sound/ofBaseSoundPlayer.h \
   ../../../../libs/openFrameworks/sound/ofFmodSoundPlayer.h \
   ../../../../libs/fmodex/include/fmod.h \
@@ -166,7 +250,14 @@ dependencies: \
   ../../../../libs/fmodex/include/fmod_dsp.h \
   ../../../../libs/fmodex/include/fmod_memoryinfo.h \
   ../../../../libs/fmodex/include/fmod_errors.h \
+<<<<<<< Updated upstream
   /Users/Stardust/Documents/GitHub/openFrameworks0084/libs/openFrameworks/video/ofVideoGrabber.h \
   ../../../../libs/openFrameworks/video/ofQTKitGrabber.h \
   /Users/Stardust/Documents/GitHub/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/3d/ofCamera.h \
   /Users/Stardust/Documents/GitHub/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/3d/ofEasyCam.h
+=======
+  /Users/cmiles1/Documents/Github/openFrameworks0084/libs/openFrameworks/video/ofVideoGrabber.h \
+  ../../../../libs/openFrameworks/video/ofQTKitGrabber.h \
+  /Users/cmiles1/Documents/Github/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/3d/ofCamera.h \
+  /Users/cmiles1/Documents/Github/openFrameworks0084/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/3d/ofEasyCam.h
+>>>>>>> Stashed changes
