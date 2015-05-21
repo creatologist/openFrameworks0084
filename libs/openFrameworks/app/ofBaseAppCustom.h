@@ -4,30 +4,18 @@
 #include "ofPoint.h"
 #include "ofEvents.h"
 #include "ofBaseTypes.h"
-
-
-#define GLFW_INCLUDE_NONE
-
-#if (_MSC_VER)
-#include <GLFW/glfw3.h>
-#else
-#include "GLFW/glfw3.h"
-#endif
-
 #include "ofAppGLFWWindow.h"
 
-class ofBaseApp : public ofBaseSoundInput, public ofBaseSoundOutput {
-    
+#include <GLFW/glfw3.h>
+
+class ofBaseAppCustom : public ofBaseApp, public ofAppGLFWWindow{
+
 	public:
-        ofBaseApp() {
+        ofBaseAppCustom() {
             mouseX = mouseY = 0;
         }
-    
-    bool isCustom() {
-        return false;
-    }
 
-		virtual ~ofBaseApp(){
+		virtual ~ofBaseAppCustom(){
 		}
 
 		virtual void setup(){}
@@ -42,14 +30,17 @@ class ofBaseApp : public ofBaseSoundInput, public ofBaseSoundOutput {
     
         ofEvent<ofVec2f> onScroll;
     
+        virtual void scrolling( double x, double y ){}
+    
+    void enableGLFW() {
+        glfwSetScrollCallback( windowP, ofBaseAppCustom::scroll_cb );
+    }
+    
     static void scroll_cb(GLFWwindow* windowP_, double x, double y){
         //cout << x << "," << y << endl;
         if ( y < 0 ) ofNotifyScrollDown(x, -y);
         else if ( y > 0 ) ofNotifyScrollUp(x, -y);
     };
-
-    
-        virtual void scrolling( double x, double y ){}
 
 		virtual void mouseMoved( int x, int y ){}
 		virtual void mouseDragged( int x, int y, int button ){}

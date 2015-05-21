@@ -21,9 +21,10 @@ class ofxFensterManager;
 class ofxFenster : public ofAppGLFWWindow, public ofBaseApp
 {
 
-    GLFWwindow* windowP;
+    
 
 public:
+    GLFWwindow* windowP;
 
     ofxFenster();
     ~ofxFenster() {}
@@ -140,7 +141,7 @@ public:
 
     ofEvent<ofDragInfo> onDrag;
 
-private:
+
     // callbacks
 
 
@@ -152,7 +153,8 @@ private:
     static void		scroll_cb(GLFWwindow* windowP_, double x, double y);
     static void 	drop_cb(GLFWwindow* windowP_, const char* dropString);
     static void 	exitApp();
-
+    
+private:
 #ifdef TARGET_LINUX
     void setWindowIcon(const string & path);
     void setWindowIcon(const ofPixels & iconPixels);

@@ -93,9 +93,10 @@ void ofxFensterManager::draw() {
         it_count++;
         
     }
-    it_count = 0;
     
-    //cout << "totalWindows: " << i << endl;
+    
+    //cout << "totalWindows: " << it_count << endl;
+    it_count = 0;
     
     /*for(vector<ofxFenster*>::iterator it = windowsF.begin(); it != windowsF.end(); it++, i++)
     {

@@ -1,6 +1,7 @@
 #include "ofAppRunner.h"
 
 #include "ofBaseApp.h"
+#include "ofBaseAppCustom.h"
 #include "ofAppBaseWindow.h"
 
 #ifndef TARGET_NO_SOUND
@@ -126,7 +127,7 @@ void ofRunApp(ofBaseApp * OFSA){
     ofAddListener(ofEvents().keyPressed,OFSAptr.get(),&ofBaseApp::keyPressed,OF_EVENT_ORDER_APP);
     ofAddListener(ofEvents().keyReleased,OFSAptr.get(),&ofBaseApp::keyReleased,OF_EVENT_ORDER_APP);
     ofAddListener(ofEvents().scrolling, ofGetAppPtr(),&ofBaseApp::scrolling,OF_EVENT_ORDER_APP);
-        glfwSetScrollCallback(OFSA->windowP, ofBaseApp::scroll_cb );
+        //glfwSetScrollCallback(OFSA->windowP, ofBaseAppCustom::scroll_cb );
     ofAddListener(ofEvents().mouseMoved,OFSAptr.get(),&ofBaseApp::mouseMoved,OF_EVENT_ORDER_APP);
     ofAddListener(ofEvents().mouseDragged,OFSAptr.get(),&ofBaseApp::mouseDragged,OF_EVENT_ORDER_APP);
     ofAddListener(ofEvents().mousePressed,OFSAptr.get(),&ofBaseApp::mousePressed,OF_EVENT_ORDER_APP);
