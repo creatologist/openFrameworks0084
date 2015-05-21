@@ -125,7 +125,8 @@ void ofRunApp(ofBaseApp * OFSA){
     ofAddListener(ofEvents().exit,OFSAptr.get(),&ofBaseApp::exit,OF_EVENT_ORDER_APP);
     ofAddListener(ofEvents().keyPressed,OFSAptr.get(),&ofBaseApp::keyPressed,OF_EVENT_ORDER_APP);
     ofAddListener(ofEvents().keyReleased,OFSAptr.get(),&ofBaseApp::keyReleased,OF_EVENT_ORDER_APP);
-    ofAddListener(ofEvents().scrolling,OFSAptr.get(),&ofBaseApp::scrolling,OF_EVENT_ORDER_APP);
+    ofAddListener(ofEvents().scrolling, ofGetAppPtr(),&ofBaseApp::scrolling,OF_EVENT_ORDER_APP);
+        glfwSetScrollCallback(OFSA->windowP, ofBaseApp::scroll_cb );
     ofAddListener(ofEvents().mouseMoved,OFSAptr.get(),&ofBaseApp::mouseMoved,OF_EVENT_ORDER_APP);
     ofAddListener(ofEvents().mouseDragged,OFSAptr.get(),&ofBaseApp::mouseDragged,OF_EVENT_ORDER_APP);
     ofAddListener(ofEvents().mousePressed,OFSAptr.get(),&ofBaseApp::mousePressed,OF_EVENT_ORDER_APP);
@@ -135,6 +136,7 @@ void ofRunApp(ofBaseApp * OFSA){
     ofAddListener(ofEvents().messageEvent,OFSAptr.get(),&ofBaseApp::messageReceived,OF_EVENT_ORDER_APP);
     ofAddListener(ofEvents().fileDragEvent,OFSAptr.get(),&ofBaseApp::dragged,OF_EVENT_ORDER_APP);
 
+    
 	window->runAppViaInfiniteLoop(OFSAptr.get());
 }
 

@@ -1,10 +1,12 @@
 #pragma once
 
+#include "ofAppRunner.h"
 #include "ofPoint.h"
 #include "ofEvents.h"
 #include "ofBaseTypes.h"
+#include "ofAppGLFWWindow.h"
 
-class ofBaseApp : public ofBaseSoundInput, public ofBaseSoundOutput{
+class ofBaseApp : public ofBaseSoundInput, public ofBaseSoundOutput, public ofAppGLFWWindow {
 
 	public:
         ofBaseApp() {
@@ -19,13 +21,22 @@ class ofBaseApp : public ofBaseSoundInput, public ofBaseSoundOutput{
 		virtual void draw(){}
 		virtual void exit(){}
 
-
 		virtual void windowResized(int w, int h){}
 
 		virtual void keyPressed( int key ){}
 		virtual void keyReleased( int key ){}
     
+        ofEvent<ofVec2f> onScroll;
+    
         virtual void scrolling( double x, double y ){}
+    
+        static void scroll_cb(GLFWwindow* windowP_, double x, double y){
+            //cout << x << "," << y << endl;
+            if ( y < 0 ) ofNotifyScrollDown(x, -y);
+            else if ( y > 0 ) ofNotifyScrollUp(x, -y);
+        };
+    
+        
 
 		virtual void mouseMoved( int x, int y ){}
 		virtual void mouseDragged( int x, int y, int button ){}
@@ -64,10 +75,9 @@ class ofBaseApp : public ofBaseSoundInput, public ofBaseSoundOutput{
 			keyReleased(key.key);
 		}
     
-    virtual void scrolling( ofScrollEventArgs & scroll ){
-        scrolling( scroll.x, scroll.y );
-    }
-    
+        virtual void scrolling( ofScrollEventArgs & scroll ){
+            scrolling( scroll.x, scroll.y );
+        }
 
 		virtual void mouseMoved( ofMouseEventArgs & mouse ){
 			mouseX=mouse.x;
@@ -98,6 +108,9 @@ class ofBaseApp : public ofBaseSoundInput, public ofBaseSoundOutput{
 		virtual void messageReceived(ofMessage & message){
 			gotMessage(message);
 		}
+private:
+    bool _initScrolling;
+    bool _scrollingActive;
 };
 
 
