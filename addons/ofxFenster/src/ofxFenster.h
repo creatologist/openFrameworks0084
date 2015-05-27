@@ -30,6 +30,8 @@ public:
     ~ofxFenster() {}
     
     int managerIndex;
+    
+    //static void focus_cb(GLFWwindow* windowP_, int focused );
 
     // window settings, this functions can be called from main before calling ofSetupOpenGL
     void 		setNumSamples(int samples);

@@ -22,13 +22,28 @@ class ofBaseApp : public ofBaseSoundInput, public ofBaseSoundOutput {
         ofBaseApp() {
             mouseX = mouseY = 0;
         }
+    virtual ~ofBaseApp(){
+    }
     
     bool isCustom() {
         return false;
     }
-
-		virtual ~ofBaseApp(){
-		}
+    
+    ofBaseApp* getBaseApp() {
+        return this;
+    }
+    
+    bool _isFocused = false;
+    virtual bool getIsFocused() {
+        return _isFocused;
+        /*if ( isFocused ) return true;
+        else return false;*/
+    }
+    void setIsFocused( bool b_ ) {
+        _isFocused = b_;
+    };
+    
+		
 
 		virtual void setup(){}
 		virtual void update(){}
@@ -49,7 +64,9 @@ class ofBaseApp : public ofBaseSoundInput, public ofBaseSoundOutput {
     };
 
     
-        virtual void scrolling( double x, double y ){}
+    void scrolling( double x, double y ) {
+        cout << x << ", " << y << endl;
+    }
 
 		virtual void mouseMoved( int x, int y ){}
 		virtual void mouseDragged( int x, int y, int button ){}

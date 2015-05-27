@@ -42,7 +42,12 @@ private:
     static void exit_cb(GLFWwindow* windowP_);
     static void scroll_cb(GLFWwindow* windowP_, double x, double y);
     static void drop_cb(GLFWwindow* windowP_, int numFiles, const char** dropString);
+    static void focus_cb(GLFWwindow* windowP_, int focused );
 
+    void setFocusedWindow( ofxFenster* fenster ) {
+        focusedWindow = fenster;
+    }
+    
     ofxFensterManager();
     ~ofxFensterManager();
 
@@ -50,6 +55,7 @@ private:
 
     //std::vector<ofxFensterPtr> windows;
     vector<ofxFenster*> windows;
+    int currentWindowIndex = 0;
     //std::vector<ofxFensterPtr> windowsSwap;
 
     //std::vector<ofxFenster*> windowsF;
@@ -58,6 +64,8 @@ private:
     
     //ofxFensterPtr mainWindow;
     ofxFenster* mainWindow;
+    
+    ofxFenster* focusedWindow;
 
     friend class ofxFenster;
 };

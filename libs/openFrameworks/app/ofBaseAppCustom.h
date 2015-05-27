@@ -34,6 +34,8 @@ class ofBaseAppCustom : public ofBaseApp, public ofAppGLFWWindow{
     
     void enableGLFW() {
         glfwSetScrollCallback( windowP, ofBaseAppCustom::scroll_cb );
+        //glfwSetWindowFocusCallback( windowP, ofBaseAppCustom::focus_cb );
+        //isFocused = true;
     }
     
     static void scroll_cb(GLFWwindow* windowP_, double x, double y){
@@ -41,7 +43,6 @@ class ofBaseAppCustom : public ofBaseApp, public ofAppGLFWWindow{
         if ( y < 0 ) ofNotifyScrollDown(x, -y);
         else if ( y > 0 ) ofNotifyScrollUp(x, -y);
     };
-
 		virtual void mouseMoved( int x, int y ){}
 		virtual void mouseDragged( int x, int y, int button ){}
 		virtual void mousePressed( int x, int y, int button ){}
@@ -112,6 +113,8 @@ class ofBaseAppCustom : public ofBaseApp, public ofAppGLFWWindow{
 		virtual void messageReceived(ofMessage & message){
 			gotMessage(message);
 		}
+    
+    friend class ofBaseApp;
 private:
     bool _initScrolling;
     bool _scrollingActive;

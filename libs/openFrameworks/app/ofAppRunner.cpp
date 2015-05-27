@@ -19,6 +19,7 @@
 #include "ofTrueTypeFont.h"
 #include "ofURLFileLoader.h"
 #include "Poco/Net/NetSSL.h"
+#include <GLFW/glfw3.h>
 
 
 // TODO: closing seems wonky.
@@ -136,6 +137,8 @@ void ofRunApp(ofBaseApp * OFSA){
     ofAddListener(ofEvents().windowResized,OFSAptr.get(),&ofBaseApp::windowResized,OF_EVENT_ORDER_APP);
     ofAddListener(ofEvents().messageEvent,OFSAptr.get(),&ofBaseApp::messageReceived,OF_EVENT_ORDER_APP);
     ofAddListener(ofEvents().fileDragEvent,OFSAptr.get(),&ofBaseApp::dragged,OF_EVENT_ORDER_APP);
+    
+    OFSAptr->setIsFocused( true );
 
     
 	window->runAppViaInfiniteLoop(OFSAptr.get());

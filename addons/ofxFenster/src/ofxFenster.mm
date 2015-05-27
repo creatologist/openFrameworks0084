@@ -83,7 +83,6 @@ ofxFenster::ofxFenster(): ofAppGLFWWindow()
     addListener(this);
     //cout << ofGetAppPtr() << endl;
     //addListener( ofGetAppPtr() );
-    
 }
 
 
@@ -327,6 +326,7 @@ void ofxFenster::initializeWindow()
     glfwSetWindowCloseCallback(windowP, ofxFensterManager::exit_cb);
     glfwSetScrollCallback(windowP, ofxFensterManager::scroll_cb);
     glfwSetDropCallback(windowP, ofxFensterManager::drop_cb);
+    glfwSetWindowFocusCallback( windowP, ofxFensterManager::focus_cb );
     //glfwSet
     isActive = true;
 
@@ -1087,9 +1087,11 @@ bool ofxFenster::isWindowIconified()
 //------------------------------------------------------------
 bool ofxFenster::isWindowActive()
 {
-    //	return glfwGetWindowParam(GLFW_ACTIVE);
-    return true;
+    //return glfwGetWindowParam(GLFW_ACTIVE);
+    //return true;
 }
+
+
 
 //------------------------------------------------------------
 bool ofxFenster::isWindowResizeable()

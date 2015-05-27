@@ -144,7 +144,16 @@ void ofxFensterManager::runAppViaInfiniteLoop(ofBaseApp* appPtr)
 
 ofxFenster* ofxFensterManager::createWindow(int w, int h, int screenMode)
 {
-    return createWindow(0, 0, w, h, screenMode);
+    
+    for(vector<ofxFenster*>::iterator it = get()->windows.begin(); it < get()->windows.end(); it++)
+    {
+        (*it)->setIsFocused( false );
+    }
+    ofGetAppPtr()->setIsFocused( false );
+    
+    focusedWindow = createWindow(0, 0, w, h, screenMode);
+    focusedWindow->setIsFocused( true );
+    return focusedWindow;
 }
 
 ofxFenster* ofxFensterManager::createWindow(int x, int y, int w, int h, int screenMode)
@@ -202,6 +211,13 @@ void ofxFensterManager::closeWindow( int index_ ){
 
 void ofxFensterManager::setupWindow(ofxFenster* window, int x, int y, int w, int h, int screenMode)
 {
+    for(vector<ofxFenster*>::iterator it = get()->windows.begin(); it < get()->windows.end(); it++)
+    {
+        (*it)->setIsFocused( false );
+    }
+    ofGetAppPtr()->setIsFocused( false );
+    window->setIsFocused( true );
+    
     window->setupOpenGL(w, h, screenMode);
     window->setWindowPosition(x, y);
     window->initializeWindow();
@@ -384,7 +400,7 @@ void ofxFensterManager::motion_cb(GLFWwindow* windowP_, double x, double y)
 //------------------------------------------------------------
 void ofxFensterManager::scroll_cb(GLFWwindow* windowP_, double x, double y)
 {
-    //cout << "scrolling" << endl;
+    cout << "scrolling" << endl;
     ofxFenster* fenster = get()->getFensterByGlfwHandle(windowP_);
     int button;
 
@@ -430,6 +446,51 @@ void ofxFensterManager::drop_cb(GLFWwindow* windowP_, int numFiles, const char**
 #endif
     ofNotifyDragEvent(drag);
 }
+
+void ofxFensterManager::focus_cb(GLFWwindow* windowP_, int focused ) {
+    cout << "FOCUS CHANGED" << endl;
+    bool found = false;
+    
+    //ofGetAppPtr()->isFocused = true;
+    ofGetAppPtr()->setIsFocused( true );
+    
+    if ( focused ) {
+        ofGetAppPtr()->setIsFocused( false );
+        for(vector<ofxFenster*>::iterator it = get()->windows.begin(); it < get()->windows.end(); it++)
+        {
+            if ( windowP_ == (*it)->windowP ) {
+                (*it)->setIsFocused( true );
+                found = true;
+            } else {
+                (*it)->setIsFocused( false );
+            }
+        }
+    } else {
+        
+        
+        for(vector<ofxFenster*>::iterator it = get()->windows.begin(); it < get()->windows.end(); it++)
+        {
+            if ( windowP_ == (*it)->windowP ) {
+                (*it)->setIsFocused( false );
+                found = true;
+            }
+        }
+        
+        
+    }
+    
+    
+    //cout << found << endl;
+    
+    
+    
+    
+    if ( focused == GL_TRUE ) {
+        //cout << "FOCUS" << endl;
+    } else {
+        //cout << "UNFOCUS" << endl;
+    }
+};
 
 //------------------------------------------------------------
 void ofxFensterManager::keyboard_cb(GLFWwindow* windowP_, int key, int scancode, unsigned int codepoint, int action, int mods)
