@@ -43,6 +43,7 @@ class ofBaseAppCustom : public ofBaseApp, public ofAppGLFWWindow{
         if ( y < 0 ) ofNotifyScrollDown(x, -y);
         else if ( y > 0 ) ofNotifyScrollUp(x, -y);
     };
+    
 		virtual void mouseMoved( int x, int y ){}
 		virtual void mouseDragged( int x, int y, int button ){}
 		virtual void mousePressed( int x, int y, int button ){}

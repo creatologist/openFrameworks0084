@@ -76,7 +76,7 @@ void ofxFensterManager::draw() {
             it++;
         } else {
             //cout << "window: " << it_count << endl;
-            
+            //glfwMakeContextCurrent( (*it)->windowP );
             
             if ( (*it)->getIsActive() ) {
                 (*it)->display();
@@ -171,7 +171,20 @@ void ofxFensterManager::setupWindow(ofxFenster* window, int w, int h, int screen
 }
 
 void ofxFensterManager::closeWindow( ofxFenster* window_ ){
-    window_->closeWindow();
+    //window_->closeWindow();
+    
+    
+    for(vector<ofxFenster*>::iterator it = get()->windows.begin(); it < get()->windows.end(); it++)
+    {
+        //
+        if ( (*it) == window_ ) {
+            (*it)->setIsFocused( false );
+            (*it)->closeWindow();
+        }
+    }
+    
+    ofGetAppPtr()->setIsFocused( true );
+    
     
     //int index = window_->getFensterManagerIndex();
     
@@ -206,6 +219,8 @@ void ofxFensterManager::closeWindow( ofxFenster* window_ ){
 };
 
 void ofxFensterManager::closeWindow( int index_ ){
+    ofGetAppPtr()->setIsFocused( true );
+    
     windows.at( index_ )->closeWindow();
 };
 
@@ -448,7 +463,7 @@ void ofxFensterManager::drop_cb(GLFWwindow* windowP_, int numFiles, const char**
 }
 
 void ofxFensterManager::focus_cb(GLFWwindow* windowP_, int focused ) {
-    cout << "FOCUS CHANGED" << endl;
+    //cout << "FOCUS CHANGED" << endl;
     bool found = false;
     
     //ofGetAppPtr()->isFocused = true;

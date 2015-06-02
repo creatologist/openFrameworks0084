@@ -90,8 +90,9 @@ public:
 		Settings();
 		bool operator!=(const Settings & other);
 	};
+    Settings 			settings;
+    
 private:
-	Settings 			settings;
 	int					isBound;
 
 	GLuint				fbo;			// main fbo which we bind for drawing into, all renderbuffers are attached to this
