@@ -146,7 +146,11 @@ public:
 
     // callbacks
 
-
+    virtual void onUpdateEvent( ofEventArgs& args_ ) {
+        //cout << "onUpdateEvent ofxFenster.." << endl;
+        //ofNotify( onUpda)
+    }
+    
     static void 	mouse_cb(GLFWwindow* windowP_, int button, int state, int mods);
     static void 	motion_cb(GLFWwindow* windowP_, double x, double y);
     static void 	keyboard_cb(GLFWwindow* windowP_, int key, int scancode, int action, int mods);

@@ -92,13 +92,15 @@ void ofxFenster::addListener(ofBaseApp* baseApp)
     //ofAddListener(onSetup, this, &ofxFenster::setup);
     
     ofAddListener(onSetup, baseApp, &ofBaseApp::setup);
-    ofAddListener(onUpdate, baseApp, &ofBaseApp::update);
+    //ofAddListener(onUpdate, baseApp, &ofBaseApp::update);
+    ofAddListener(ofEvents().update, this, &ofxFenster::onUpdateEvent);
     ofAddListener(onDraw, baseApp, &ofBaseApp::draw);
     ofAddListener(onExit, baseApp, &ofBaseApp::exit);
     
     //ofAddListener(onClose, baseApp, &ofBaseApp::close);
     
 
+    //ofAddListener(onWindowResize, baseApp, &ofBaseApp::windowResized);
     ofAddListener(onWindowResize, baseApp, &ofBaseApp::windowResized);
 
     ofAddListener(onKeyPressed, baseApp, &ofBaseApp::keyPressed);
@@ -433,7 +435,7 @@ void ofxFenster::display(bool notifyDraw)
         ofNotifyDraw();
     }
 
-
+    // !!!
     ofNotifyEvent(onDraw, args);
 
 #ifdef TARGET_WIN32

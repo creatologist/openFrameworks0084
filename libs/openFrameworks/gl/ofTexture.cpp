@@ -564,32 +564,41 @@ void ofTexture::loadData(const void * data, int w, int h, int glFormat, int glTy
 		if (texData.compressionType == OF_COMPRESS_SRGB)
 		{
 			if(texData.glTypeInternal == GL_RGBA)
-				gluBuild2DMipmaps(texData.textureTarget, GL_COMPRESSED_SRGB_ALPHA, w, h, glFormat, glType, data);
+                // Christopher Miles -- UPDATE
+				//glGenerateM(texData.textureTarget, GL_COMPRESSED_SRGB_ALPHA, w, h, glFormat, glType, data);
+                glGenerateMipmap(texData.textureTarget );
 			
 			else if(texData.glTypeInternal == GL_RGB)
-				gluBuild2DMipmaps(texData.textureTarget, GL_COMPRESSED_SRGB_ALPHA, w, h, glFormat, glType, data);
+				//gluBuild2DMipmaps(texData.textureTarget, GL_COMPRESSED_SRGB_ALPHA, w, h, glFormat, glType, data);
+                glGenerateMipmap(texData.textureTarget );
 			
 			else if(texData.glTypeInternal == GL_LUMINANCE_ALPHA)
-				gluBuild2DMipmaps(texData.textureTarget, GL_COMPRESSED_SRGB_ALPHA, w, h, glFormat, glType, data);
+				//gluBuild2DMipmaps(texData.textureTarget, GL_COMPRESSED_SRGB_ALPHA, w, h, glFormat, glType, data);
+                glGenerateMipmap(texData.textureTarget );
 			
 			else if(texData.glTypeInternal == GL_LUMINANCE)
-				gluBuild2DMipmaps(texData.textureTarget, GL_COMPRESSED_SRGB_ALPHA, w, h, glFormat, glType, data);
+				//gluBuild2DMipmaps(texData.textureTarget, GL_COMPRESSED_SRGB_ALPHA, w, h, glFormat, glType, data);
+                glGenerateMipmap(texData.textureTarget );
 		}
 		
 		//using ARB compression: default
 		else
 		{
 			if(texData.glTypeInternal == GL_RGBA)
-				gluBuild2DMipmaps(texData.textureTarget, GL_COMPRESSED_RGBA_ARB, w, h, glFormat, glType, data);
+				//gluBuild2DMipmaps(texData.textureTarget, GL_COMPRESSED_RGBA_ARB, w, h, glFormat, glType, data);
+                glGenerateMipmap(texData.textureTarget );
 			
 			else if(texData.glTypeInternal == GL_RGB)
-				gluBuild2DMipmaps(texData.textureTarget, GL_COMPRESSED_RGB_ARB, w, h, glFormat, glType, data);
+				//gluBuild2DMipmaps(texData.textureTarget, GL_COMPRESSED_RGB_ARB, w, h, glFormat, glType, data);
+                glGenerateMipmap(texData.textureTarget );
 			
 			else if(texData.glTypeInternal == GL_LUMINANCE_ALPHA)
-				gluBuild2DMipmaps(texData.textureTarget, GL_COMPRESSED_LUMINANCE_ALPHA_ARB, w, h, glFormat, glType, data);
+				//gluBuild2DMipmaps(texData.textureTarget, GL_COMPRESSED_LUMINANCE_ALPHA_ARB, w, h, glFormat, glType, data);
+                glGenerateMipmap(texData.textureTarget );
 			
 			else if(texData.glTypeInternal == GL_LUMINANCE)
-				gluBuild2DMipmaps(texData.textureTarget, GL_COMPRESSED_LUMINANCE_ARB, w, h, glFormat, glType, data);
+				//gluBuild2DMipmaps(texData.textureTarget, GL_COMPRESSED_LUMINANCE_ARB, w, h, glFormat, glType, data);
+                glGenerateMipmap(texData.textureTarget );
 		}
 #endif
 		

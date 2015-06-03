@@ -706,7 +706,7 @@ void ofxFensterManager::resize_cb(GLFWwindow* windowP_, int w, int h)
     ofxFenster* fenster = get()->getFensterByGlfwHandle(windowP_);
     fenster->windowW = w;
     fenster->windowH = h;
-    cout << h << endl;
+    //cout << h << endl;
 
     if(fenster == get()->mainWindow)
     {
