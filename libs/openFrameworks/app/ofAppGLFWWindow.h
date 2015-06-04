@@ -121,6 +121,7 @@ private:
 	static void 	drop_cb(GLFWwindow* windowP_, int numFiles, const char** dropString);
 	static void		error_cb(int errorCode, const char* errorDescription);
 	static void 	exitApp();
+    static void custom_fbsize_callback(GLFWwindow* window, int width, int height);
 
 #ifdef TARGET_LINUX
 	void setWindowIcon(const string & path);
