@@ -92,8 +92,8 @@ void ofxFenster::addListener(ofBaseApp* baseApp)
     //ofAddListener(onSetup, this, &ofxFenster::setup);
     
     ofAddListener(onSetup, baseApp, &ofBaseApp::setup);
-    //ofAddListener(onUpdate, baseApp, &ofBaseApp::update);
-    ofAddListener(ofEvents().update, this, &ofxFenster::onUpdateEvent);
+    ofAddListener(onUpdate, baseApp, &ofBaseApp::update);
+    //ofAddListener(ofEvents().update, this, &ofxFenster::onUpdateEvent);
     ofAddListener(onDraw, baseApp, &ofBaseApp::draw);
     ofAddListener(onExit, baseApp, &ofBaseApp::exit);
     
