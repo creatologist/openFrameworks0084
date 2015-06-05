@@ -330,6 +330,20 @@ ofBaseApp * ofGetAppPtr(){
 ofAppBaseWindow * ofGetWindowPtr(){
 	return window.get();
 }
+ofAppGLFWWindow* customGLFWWindowPtr;
+bool hasCustomCocoaWindow = false;
+void ofSetCustomGLFWWindow( ofAppGLFWWindow* window_ ) {
+    
+    hasCustomCocoaWindow = true;
+    customGLFWWindowPtr = window_;
+    cout << "SET !! hasCustomCocoaWindow - " << hasCustomCocoaWindow << endl;
+};
+
+ofAppGLFWWindow* ofGetCustomGLFWWindow() {
+    return customGLFWWindowPtr;
+};
+
+
 
 //--------------------------------------
 void ofSetAppPtr(ofPtr<ofBaseApp> appPtr) {
@@ -508,7 +522,22 @@ void * ofGetNSGLContext(){
 }
 
 void * ofGetCocoaWindow(){
-	return window->getCocoaWindow();
+    if ( !ofHasCustomCocoaWindow() ) return window->getCocoaWindow();
+    else return ofGetCustomGLFWWindow()->getCocoaWindow();
+}
+
+bool ofHasCustomCocoaWindow() {
+    cout << "hasCustomCocoaWindow - " << hasCustomCocoaWindow << endl;
+    if ( hasCustomCocoaWindow ) {
+        hasCustomCocoaWindow = false;
+        return true;
+    }
+    return false;
+};
+
+void * ofGetCustomCocoaWindow(){
+    cout << "CUSTOM" << endl;
+    return ofGetCustomGLFWWindow()->getCocoaWindow();
 }
 #endif
 

@@ -26,7 +26,7 @@
 #include <GLFW/glfw3native.h>
 #endif
 
-
+#include "ofSystemUtils.cpp"
 
 void ofGLReadyCallback();
 
@@ -184,8 +184,10 @@ void ofxFensterManager::closeWindow( ofxFenster* window_ ){
     }
     
     ofGetAppPtr()->setIsFocused( true );
-    
-    
+#ifdef TARGET_OSX
+    //restoreAppWindowFocus();
+    restoreAppWindowFocus();
+#endif
     //int index = window_->getFensterManagerIndex();
     
     /*for (vector< ofxFensterPtr >::iterator it = windowsSwap.begin(); it != windowsSwap.end(); it++)

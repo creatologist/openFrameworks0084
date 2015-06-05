@@ -1,11 +1,11 @@
-
+#ifndef __ofSystemUtils__
+#define __ofSystemUtils__
 #include "ofConstants.h"
 #include "ofSystemUtils.h"
 #include "ofFileUtils.h"
 #include "ofLog.h"
 #include "ofUtils.h"
 #include "ofAppRunner.h"
-
 #ifdef TARGET_WIN32
 #include <winuser.h>
 #include <commdlg.h>
@@ -65,10 +65,19 @@ std::wstring convertNarrowToWide( const std::string& as ){
 
 #if defined( TARGET_OSX )
 static void restoreAppWindowFocus(){
-	NSWindow * appWindow = (NSWindow *)ofGetCocoaWindow();
-	if(appWindow) {
-		[appWindow makeKeyAndOrderFront:nil];
-	}
+    NSWindow * appWindow = (NSWindow *)ofGetCocoaWindow();
+    if(appWindow) {
+        [appWindow makeKeyAndOrderFront:nil];
+    }
+	
+	
+}
+
+static void restoreAppWindowFocus( NSWindow * nswindow ){
+    NSWindow * appWindow = nswindow;
+    if(appWindow) {
+        [appWindow makeKeyAndOrderFront:nil];
+    }
 }
 #endif
 
@@ -313,6 +322,7 @@ static int CALLBACK loadDialogBrowseCallback(
 //---------------------------------------------------------------------
 
 // OS specific results here.  "" = cancel or something bad like can't load, can't save, etc...
+
 ofFileDialogResult ofSystemLoadDialog(string windowTitle, bool bFolderSelection, string defaultPath){
 
 	ofFileDialogResult results;
@@ -878,3 +888,4 @@ string ofSystemTextBoxDialog(string question, string text){
 
 	return text;
 }
+#endif
