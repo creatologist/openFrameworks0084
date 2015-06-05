@@ -246,7 +246,7 @@ void ofxFensterManager::setupWindow(ofxFenster* window, int x, int y, int w, int
 void ofxFensterManager::addWindow(ofxFenster* window)
 {
     //cout << windowsF.size() << endl;
-    cout << "ADD WINDOW: " << windows.size() << endl;
+    //cout << "ADD WINDOW: " << windows.size() << endl;
     //windows.push_back(ofxFensterPtr(window));
     windows.push_back( window );
     //windowsF.push_back( window );
