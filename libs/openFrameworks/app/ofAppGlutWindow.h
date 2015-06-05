@@ -25,7 +25,6 @@ public:
 	
 	void initializeWindow();
 	void runAppViaInfiniteLoop(ofBaseApp * appPtr);
-	
 	//note if you fail to set a compatible string the app will not launch
 	void setGlutDisplayString(string str);
 

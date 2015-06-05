@@ -336,7 +336,7 @@ void ofSetCustomGLFWWindow( ofAppGLFWWindow* window_ ) {
     
     hasCustomCocoaWindow = true;
     customGLFWWindowPtr = window_;
-    cout << "SET !! hasCustomCocoaWindow - " << hasCustomCocoaWindow << endl;
+    //cout << "SET !! hasCustomCocoaWindow - " << hasCustomCocoaWindow << endl;
 };
 
 ofAppGLFWWindow* ofGetCustomGLFWWindow() {
@@ -527,7 +527,7 @@ void * ofGetCocoaWindow(){
 }
 
 bool ofHasCustomCocoaWindow() {
-    cout << "hasCustomCocoaWindow - " << hasCustomCocoaWindow << endl;
+    //cout << "hasCustomCocoaWindow - " << hasCustomCocoaWindow << endl;
     if ( hasCustomCocoaWindow ) {
         hasCustomCocoaWindow = false;
         return true;

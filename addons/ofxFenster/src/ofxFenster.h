@@ -51,6 +51,8 @@ public:
     int        getFensterManagerIndex() { return managerIndex; };
     ofxFenster* get(){ return this; }
     bool        getIsActive() { return isActive; };
+    
+    
 
     // this functions are only meant to be called from inside OF don't call them from your code
     void setOpenGLVersion(int major, int minor);

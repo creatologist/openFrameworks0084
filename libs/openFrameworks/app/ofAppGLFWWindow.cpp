@@ -225,7 +225,7 @@ void ofAppGLFWWindow::setupOpenGL(int w, int h, int screenMode){
     
     //this lets us detect if the window is running in a retina mode
     if( framebufferW != windowW ){
-        cout << "retina" << endl;
+        //cout << "retina" << endl;
         pixelScreenCoordScale = framebufferW / windowW;
         
         //have to update the windowShape to account for retina coords
@@ -233,8 +233,8 @@ void ofAppGLFWWindow::setupOpenGL(int w, int h, int screenMode){
             setWindowShape(windowW, windowH);
         }
     } else {
-        cout << "non-retina" << endl;
-        cout << pixelScreenCoordScale << endl;
+        //cout << "non-retina" << endl;
+        //cout << pixelScreenCoordScale << endl;
         /*pixelScreenCoordScale = 2;
         if( windowMode == OF_WINDOW ){
             setWindowShape(1280*pixelScreenCoordScale, 720*pixelScreenCoordScale);
@@ -272,7 +272,7 @@ void ofAppGLFWWindow::custom_fbsize_callback(GLFWwindow* window, int width, int 
     
     /* use custom width,height */
     //glViewport(0, 0, 1280, 720);
-    cout << "hi" << endl;
+    //cout << "hi" << endl;
     glViewport(0, 0, 1280, 720);
 }
 

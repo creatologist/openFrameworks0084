@@ -27,7 +27,6 @@ public:
 	ofAppGLFWWindow();
 	~ofAppGLFWWindow(){}
 
-
 	// window settings, this functions can be called from main before calling ofSetupOpenGL
 	void 		setNumSamples(int samples);
 	void 		setDoubleBuffering(bool doubleBuff);
