@@ -108,7 +108,11 @@ class ofxAnimatable{
 
 		virtual void setup();
 		virtual void update(float dt);
-
+    
+        string target = "";
+    void setTarget( string t_ ) {
+        target = t_;
+    }
 		void autoUpdate(ofEventArgs&); //to by called by autoUpdate, dont call directly
 
 		void startAutoUpdate();
