@@ -15,8 +15,19 @@ public:
     ofxFenster* createWindow(int w = 1280, int h = 720, int screenMode = OF_WINDOW);
     void setupWindow(ofxFenster* window, int x, int y, int w, int h, int screenMode = OF_WINDOW);
     void setupWindow(ofxFenster* window, int w = 1280, int h = 720, int screenMode = OF_WINDOW);
-    void closeWindow( ofxFenster* window_ );
+    void closeWindow( ofxFenster* window_, bool justRestoreAppFocus = false );
     void closeWindow( int index_ );
+    
+    void disableEscapeQuitsApp(){
+        setEscapeQuitsApp( false );
+    };
+    
+    void setEscapeQuitsApp( bool esc_ ) {
+        escapeQuitsApp = esc_;
+    };
+    
+    bool escapeQuitsApp = false;
+    
     
     ofxFenster* getMainWindow();
     void runAppViaInfiniteLoop(ofBaseApp * appPtr);

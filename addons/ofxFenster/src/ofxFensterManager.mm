@@ -170,18 +170,21 @@ void ofxFensterManager::setupWindow(ofxFenster* window, int w, int h, int screen
     setupWindow(window, 0, 0, w, h, screenMode);
 }
 
-void ofxFensterManager::closeWindow( ofxFenster* window_ ){
+void ofxFensterManager::closeWindow( ofxFenster* window_, bool justRestoreAppFocus_ ){
     //window_->closeWindow();
     
-    
-    for(vector<ofxFenster*>::iterator it = get()->windows.begin(); it < get()->windows.end(); it++)
-    {
-        //
-        if ( (*it) == window_ ) {
-            (*it)->setIsFocused( false );
-            (*it)->closeWindow();
+    if ( !justRestoreAppFocus_ ) {
+        for(vector<ofxFenster*>::iterator it = get()->windows.begin(); it < get()->windows.end(); it++)
+        {
+            //
+            if ( (*it) == window_ ) {
+                (*it)->setIsFocused( false );
+                (*it)->closeWindow();
+            }
         }
     }
+    
+    
     
     ofGetAppPtr()->setIsFocused( true );
 #ifdef TARGET_OSX
@@ -684,7 +687,7 @@ void ofxFensterManager::keyboard_cb(GLFWwindow* windowP_, int key, int scancode,
 
         if(key == OF_KEY_ESC)  				// "escape"
         {
-            ofExit();
+           if ( get()->escapeQuitsApp ) ofExit();
         }
     }
     else if(action == GLFW_RELEASE)
