@@ -573,6 +573,95 @@ ofFileDialogResult ofSystemSaveDialog(string defaultName, string messageName){
 	return results;
 }
 
+
+ofFileDialogResult ofSystemSaveDialog(string defaultName, string messageName, string defaultPath){
+
+	ofFileDialogResult results;
+
+	//----------------------------------------------------------------------------------------
+	//------------------------------------------------------------------------------       OSX
+	//----------------------------------------------------------------------------------------
+#ifdef TARGET_OSX
+
+	NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
+	NSSavePanel * saveDialog = [NSSavePanel savePanel];
+	[saveDialog setMessage:[NSString stringWithUTF8String:messageName.c_str()]];
+
+	if(!defaultPath.empty()){
+        NSString * s = [NSString stringWithUTF8String:defaultPath.c_str()];
+        s = [[s stringByExpandingTildeInPath] stringByResolvingSymlinksInPath];
+        NSURL * defaultPathUrl = [NSURL fileURLWithPath:s];
+        [saveDialog setDirectoryURL:defaultPathUrl];
+    }
+	
+	[saveDialog setNameFieldStringValue:[NSString stringWithUTF8String:defaultName.c_str()]];
+
+	NSInteger buttonClicked = [saveDialog runModal];
+	restoreAppWindowFocus();
+
+	if(buttonClicked == NSFileHandlingPanelOKButton){
+		results.filePath = string([[[saveDialog URL] path] UTF8String]);
+	}
+	[pool drain];
+
+#endif
+	//----------------------------------------------------------------------------------------
+	//----------------------------------------------------------------------------------------
+	//----------------------------------------------------------------------------------------
+
+	//----------------------------------------------------------------------------------------
+	//------------------------------------------------------------------------------   windoze
+	//----------------------------------------------------------------------------------------
+#ifdef TARGET_WIN32
+
+
+	wchar_t fileName[MAX_PATH] = L"";
+	char * extension;
+	OPENFILENAMEW ofn;
+    memset(&ofn, 0, sizeof(OPENFILENAME));
+	ofn.lStructSize = sizeof(OPENFILENAME);
+	HWND hwnd = WindowFromDC(wglGetCurrentDC());
+	ofn.hwndOwner = hwnd;
+	ofn.hInstance = GetModuleHandle(0);
+	ofn.nMaxFileTitle = 31;
+	ofn.lpstrFile = fileName;
+	ofn.nMaxFile = MAX_PATH;
+	ofn.lpstrFilter = L"All Files (*.*)\0*.*\0";
+	ofn.lpstrDefExt = L"";	// we could do .rxml here?
+	ofn.Flags = OFN_EXPLORER | OFN_PATHMUSTEXIST | OFN_OVERWRITEPROMPT | OFN_HIDEREADONLY;
+	ofn.lpstrTitle = L"Select Output File";
+
+	if (GetSaveFileNameW(&ofn)){
+		results.filePath = convertWideToNarrow(fileName);
+	}
+
+#endif
+	//----------------------------------------------------------------------------------------
+	//----------------------------------------------------------------------------------------
+	//----------------------------------------------------------------------------------------
+
+
+	//----------------------------------------------------------------------------------------
+	//------------------------------------------------------------------------------   linux
+	//----------------------------------------------------------------------------------------
+#if defined( TARGET_LINUX ) && defined (OF_USING_GTK)
+
+	results.filePath = gtkFileDialog(GTK_FILE_CHOOSER_ACTION_SAVE, messageName,defaultName);
+
+#endif
+	//----------------------------------------------------------------------------------------
+	//----------------------------------------------------------------------------------------
+	//----------------------------------------------------------------------------------------
+
+	if( results.filePath.length() > 0 ){
+		results.bSuccess = true;
+		results.fileName = ofFilePath::getFileName(results.filePath);
+	}
+
+	return results;
+}
+
+
 #ifdef TARGET_WIN32
 LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam)
 {

@@ -65,7 +65,7 @@ class ofBaseApp : public ofBaseSoundInput, public ofBaseSoundOutput {
 
     
     void scrolling( double x, double y ) {
-        cout << x << ", " << y << endl;
+        //cout << x << ", " << y << endl;
     }
 
 		virtual void mouseMoved( int x, int y ){}
