@@ -587,13 +587,13 @@ ofFileDialogResult ofSystemSaveDialog(string defaultName, string messageName, st
 	NSSavePanel * saveDialog = [NSSavePanel savePanel];
 	[saveDialog setMessage:[NSString stringWithUTF8String:messageName.c_str()]];
 
-	if(!defaultPath.empty()){
+    if(!defaultPath.empty()) {
         NSString * s = [NSString stringWithUTF8String:defaultPath.c_str()];
         s = [[s stringByExpandingTildeInPath] stringByResolvingSymlinksInPath];
         NSURL * defaultPathUrl = [NSURL fileURLWithPath:s];
         [saveDialog setDirectoryURL:defaultPathUrl];
     }
-	
+
 	[saveDialog setNameFieldStringValue:[NSString stringWithUTF8String:defaultName.c_str()]];
 
 	NSInteger buttonClicked = [saveDialog runModal];
