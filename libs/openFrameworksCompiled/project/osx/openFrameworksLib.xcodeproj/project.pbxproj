@@ -150,6 +150,9 @@
 		E703369515D4B03E009A3FDE /* ofQTKitPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = E703368F15D4B03E009A3FDE /* ofQTKitPlayer.h */; };
 		E703369615D4B03E009A3FDE /* ofQTKitPlayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = E703369015D4B03E009A3FDE /* ofQTKitPlayer.mm */; };
 		E7F985E315E0DC6A003869B5 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7F985E115E0DC54003869B5 /* Accelerate.framework */; };
+		FC63EFAF1D24C60B0032FAF5 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC63EFAC1D24C60B0032FAF5 /* AVFoundation.framework */; };
+		FC63EFB01D24C60B0032FAF5 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC63EFAD1D24C60B0032FAF5 /* CoreMedia.framework */; };
+		FC63EFB11D24C60B0032FAF5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC63EFAE1D24C60B0032FAF5 /* QuartzCore.framework */; };
 		FDFC9EF21600D70700EDD797 /* ofQTKitMovieRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = FDFC9EF01600D70500EDD797 /* ofQTKitMovieRenderer.h */; };
 		FDFC9EF31600D70700EDD797 /* ofQTKitMovieRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = FDFC9EF11600D70600EDD797 /* ofQTKitMovieRenderer.m */; };
 /* End PBXBuildFile section */
@@ -314,6 +317,9 @@
 		E703368F15D4B03E009A3FDE /* ofQTKitPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofQTKitPlayer.h; sourceTree = "<group>"; };
 		E703369015D4B03E009A3FDE /* ofQTKitPlayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ofQTKitPlayer.mm; sourceTree = "<group>"; };
 		E7F985E115E0DC54003869B5 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		FC63EFAC1D24C60B0032FAF5 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = ../../../../../../../../../System/Library/Frameworks/AVFoundation.framework; sourceTree = "<group>"; };
+		FC63EFAD1D24C60B0032FAF5 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = ../../../../../../../../../System/Library/Frameworks/CoreMedia.framework; sourceTree = "<group>"; };
+		FC63EFAE1D24C60B0032FAF5 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = ../../../../../../../../../System/Library/Frameworks/QuartzCore.framework; sourceTree = "<group>"; };
 		FDFC9EF01600D70500EDD797 /* ofQTKitMovieRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofQTKitMovieRenderer.h; sourceTree = "<group>"; };
 		FDFC9EF11600D70600EDD797 /* ofQTKitMovieRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ofQTKitMovieRenderer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -328,13 +334,16 @@
 				E4B27C2910CBEBAB00536013 /* ApplicationServices.framework in Frameworks */,
 				E4B27C2A10CBEBAB00536013 /* AudioToolbox.framework in Frameworks */,
 				E4B27C2C10CBEBAB00536013 /* CoreAudio.framework in Frameworks */,
+				FC63EFB11D24C60B0032FAF5 /* QuartzCore.framework in Frameworks */,
 				E4B27C2D10CBEBAB00536013 /* CoreFoundation.framework in Frameworks */,
+				FC63EFB01D24C60B0032FAF5 /* CoreMedia.framework in Frameworks */,
 				E4B27C2E10CBEBAB00536013 /* CoreServices.framework in Frameworks */,
 				E703368A15D4AF13009A3FDE /* CoreVideo.framework in Frameworks */,
 				E4B27C3010CBEBAB00536013 /* OpenGL.framework in Frameworks */,
 				E4B27C3110CBEBAB00536013 /* QuickTime.framework in Frameworks */,
 				E703368C15D4AF1A009A3FDE /* QTKit.framework in Frameworks */,
 				BBAB23BD13894D2600AA2426 /* GLUT.framework in Frameworks */,
+				FC63EFAF1D24C60B0032FAF5 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,6 +380,9 @@
 		E45BE5980E8CC70C009D7055 /* frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FC63EFAC1D24C60B0032FAF5 /* AVFoundation.framework */,
+				FC63EFAD1D24C60B0032FAF5 /* CoreMedia.framework */,
+				FC63EFAE1D24C60B0032FAF5 /* QuartzCore.framework */,
 				E7F985E115E0DC54003869B5 /* Accelerate.framework */,
 				E703368B15D4AF1A009A3FDE /* QTKit.framework */,
 				E703368915D4AF13009A3FDE /* CoreVideo.framework */,
