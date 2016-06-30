@@ -31,6 +31,9 @@ public:
     
     int managerIndex;
     
+    int 			curMouseX;
+    int 			curMouseY;
+    
     //static void focus_cb(GLFWwindow* windowP_, int focused );
 
     // window settings, this functions can be called from main before calling ofSetupOpenGL
@@ -186,9 +189,6 @@ private:
 
     int				buttonInUse;
     bool			buttonPressed;
-
-    int 			curMouseX;
-    int 			curMouseY;
 
     int				windowW;
     int				windowH;
