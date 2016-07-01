@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "4F520C958A811B2501FBED05761CCF376DC331B0",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "4F520C958A811B2501FBED05761CCF376DC331B0" : 0,
+    "61A01F31214718FD2AE2EF78A34ADADFCB50C4E0" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "FC03F416-C7DD-43BB-B941-2A0B5C81B794",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "4F520C958A811B2501FBED05761CCF376DC331B0" : "openFrameworks0084\/",
+    "61A01F31214718FD2AE2EF78A34ADADFCB50C4E0" : "openFrameworks0084\/addons\/ofxUVC\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "uvcTest2",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "apps\/myApps\/uvcTest2\/uvcTest2.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/pixelsandcandy\/openFrameworks0084.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4F520C958A811B2501FBED05761CCF376DC331B0"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/atduskgreg\/ofxUVC.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "61A01F31214718FD2AE2EF78A34ADADFCB50C4E0"
+    }
+  ]
+}
