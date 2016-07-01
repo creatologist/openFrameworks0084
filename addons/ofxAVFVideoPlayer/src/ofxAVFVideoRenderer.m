@@ -13,6 +13,8 @@
 
 
 - (void) loadFile:(NSString *)filename {
+    
+    
     loading = YES;
     ready = NO;
     deallocWhenReady = NO;
@@ -21,7 +23,9 @@
     
     NSLog(@"Trying to load %@", filename);
 
-    AVURLAsset *asset = [AVURLAsset URLAssetWithURL:fileURL options:nil];
+    NSDictionary *options = @{(id)AVURLAssetPreferPreciseDurationAndTimingKey:@(YES)};
+    AVURLAsset *asset = [AVURLAsset URLAssetWithURL:fileURL options:options];
+    
     NSString *tracksKey = @"tracks";
     
     [asset loadValuesAsynchronouslyForKeys:@[tracksKey] completionHandler: ^{
@@ -35,14 +39,18 @@
             
             
             if(status == AVKeyValueStatusLoaded) {
+                
                 // Asset metadata has been loaded. Set up the player
                 
                 // Extract the video track to get the video size
                 AVAssetTrack *videoTrack = [[asset tracksWithMediaType:AVMediaTypeVideo] objectAtIndex:0];
                 videoSize = [videoTrack naturalSize];
                 videoDuration = asset.duration;
+                
+                NSLog(@"video loaded at %li x %li", (long)videoSize.width, (long)videoSize.height);
 
                 self.playerItem = [AVPlayerItem playerItemWithAsset:asset];
+                
                 [self.playerItem addObserver:self forKeyPath:@"status" options:0 context:&ItemStatusContext];
                 
                 // Notify this object when the player reaches the end
@@ -52,19 +60,25 @@
                                                              name:AVPlayerItemDidPlayToEndTimeNotification
                                                            object:self.playerItem];
                 
-                self.player = [AVPlayer playerWithPlayerItem:self.playerItem];
+                self.player = [[AVPlayer playerWithPlayerItem:self.playerItem] retain];
                 
                 self.playerLayer = [AVPlayerLayer playerLayerWithPlayer:player];
                 
-                self.layerRenderer = [CARenderer rendererWithCGLContext:CGLGetCurrentContext() options:nil];
+                self.layerRenderer = [[CARenderer rendererWithCGLContext:CGLGetCurrentContext() options:nil] retain];
                 self.layerRenderer.layer = playerLayer;
                 
                 // Video is centered on 0,0 for some reason so layer bounds have to start at -width/2,-height/2
+                //self.layerRenderer.bounds = CGRectMake(-videoSize.width/2, -videoSize.height/2, videoSize.width, videoSize.height);
+                
+                //self.layerRenderer.bounds = CGRectMake(-videoSize.width, -videoSize.height, videoSize.width*2, videoSize.height*2);
+                
                 self.layerRenderer.bounds = CGRectMake(-videoSize.width/2, -videoSize.height/2, videoSize.width, videoSize.height);
                 self.playerLayer.bounds = self.layerRenderer.bounds;
             
                 ready = YES;
                 loading = NO;
+                //[asyncLock unlock];
+                
             }
             else {
                 loading = NO;
@@ -137,7 +151,7 @@
 - (void) render {
     // From https://qt.gitorious.org/qt/qtmultimedia/blobs/700b4cdf42335ad02ff308cddbfc37b8d49a1e71/src/plugins/avfoundation/mediaplayer/avfvideoframerenderer.mm
     
-    glPushAttrib(GL_ENABLE_BIT);
+    /*glPushAttrib(GL_ENABLE_BIT);
     glDisable(GL_DEPTH_TEST);
     
     glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
@@ -146,7 +160,7 @@
     glViewport(0, 0, videoSize.width, videoSize.height);
 
     glMatrixMode(GL_PROJECTION);
-    glPushMatrix();
+    //glPushMatrix();
     glLoadIdentity();
 
     glOrtho(0.0f, videoSize.width, videoSize.height, 0.0f, 0.0f, 1.0f);
@@ -155,7 +169,7 @@
     glPushMatrix();
     glLoadIdentity();
 
-    glTranslatef(videoSize.width/2,videoSize.height/2,0);
+    glTranslatef(videoSize.width,videoSize.height,0);
     
     [layerRenderer beginFrameAtTime:CACurrentMediaTime() timeStamp:NULL];
     [layerRenderer addUpdateRect:layerRenderer.layer.bounds];
@@ -163,13 +177,27 @@
     [layerRenderer endFrame];
 
     glMatrixMode(GL_MODELVIEW);
-    glPopMatrix();
+    //glPopMatrix();
     glMatrixMode(GL_PROJECTION);
     glPopMatrix();
     
-    glPopAttrib();
+    glPopAttrib();*/
+    glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
+    glClear(GL_COLOR_BUFFER_BIT);
+    
+    glMatrixMode(GL_PROJECTION);
+    //glPushMatrix();
+    glLoadIdentity();
+    
+    glOrtho(0.0f, videoSize.width, videoSize.height, 0.0f, 0.0f, 1.0f);
+    [layerRenderer beginFrameAtTime:CACurrentMediaTime() timeStamp:NULL];
+    [layerRenderer addUpdateRect:layerRenderer.layer.bounds];
+    [layerRenderer render];
+    [layerRenderer endFrame];
+    
     
     glFinish(); //Rendering needs to be done before passing texture to video frame
+    glFlush();
 }
 
 @end

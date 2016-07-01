@@ -28,6 +28,7 @@ ofxAVFVideoPlayer::~ofxAVFVideoPlayer() {
 }
 
 bool ofxAVFVideoPlayer::loadMovie(string path) {
+    
     bInitialized = false;
     NSAutoreleasePool* pool = [[NSAutoreleasePool alloc] init];
     moviePlayer = [[AVFVideoRenderer alloc] init];

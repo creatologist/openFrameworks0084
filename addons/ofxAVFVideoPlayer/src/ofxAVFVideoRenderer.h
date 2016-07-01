@@ -25,6 +25,8 @@
     CGSize videoSize;
     CMTime videoDuration;
     
+    NSLock* asyncLock;
+    
     BOOL loading;
     BOOL ready;
     BOOL deallocWhenReady;
